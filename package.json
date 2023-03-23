@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gulp": "gulp"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
