@@ -15,8 +15,8 @@
         <input ref="questionInput" v-on:keyup.enter="chatNow()" v-model="question" class="questionInput" autofocus />
       </div>
       <button @click="chatNow()" class="submitQuestionButton" :disabled="isLoading">
-        <img v-if="!isLoading" src="../../images/submit.svg" />
-        <img v-if="isLoading" class="loadingGif" src="../../images/loading.gif" />
+        <img v-if="!isLoading" src="@/assets/images/submit.svg" />
+        <img v-if="isLoading" class="loadingGif" src="@/assets/images/loading.gif" />
       </button>
     </div>
   </div>
