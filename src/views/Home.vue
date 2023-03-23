@@ -53,7 +53,6 @@ watch(allQuestionArray, async (newVar, oldVar) => {
 });
 
 function chatNow() {
-  console.log(import.meta.env.VITE_API_KEY)
   if (!isLoading.value) {
     runChatAPI();
   }
