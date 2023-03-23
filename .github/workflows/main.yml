@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
+        
+      - name: test
+        run: echo ${{ secrets.VITE_API_KEY }}
 
       # 运行构建脚本
       - name: Build frontend
