@@ -42,7 +42,9 @@ jobs:
 
       # 运行构建脚本
       - name: Build frontend
-        run: yarn build
+        run: |
+          yarn build
+          echo "VITE_API_KEY=${{ secrets.VITE_API_KEY }}" > .env
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
