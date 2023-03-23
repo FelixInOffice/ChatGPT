@@ -46,7 +46,7 @@ watch(isLoading, async (newVar, oldVar) => {
   }
 });
 
-watch(allQuestionArray, async (newVar, oldVar) => {
+watch(allQuestionArray, async () => {
   setTimeout(() => {
     answerArea.value.scrollTop = answerArea.value.scrollHeight;
   }, 100);
