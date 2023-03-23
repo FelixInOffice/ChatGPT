@@ -3,7 +3,6 @@
     <div class="answerArea" ref="answerArea">
       <div v-for="item in allQuestionArray">
         <div class="yourQuestion" v-if="item.question">
-          <!-- {{ showYourQuestion }} -->
           {{ item.question }}
         </div>
         <div class="chatGPTAnswer" style="white-space: pre-wrap;" v-if="item.answer" v-html="item.answer">
