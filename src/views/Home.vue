@@ -38,7 +38,7 @@ const openai = new OpenAIApi(new Configuration({
   apiKey: import.meta.env.VITE_API_KEY,
 }));
 
-watch(isLoading, (newVar, oldVar) => {
+watch(isLoading, async (newVar, oldVar) => {
   if (!newVar) {
     setTimeout(() => {
       answerArea.value.scrollTop = answerArea.value.scrollHeight;
@@ -46,7 +46,7 @@ watch(isLoading, (newVar, oldVar) => {
   }
 });
 
-watch(allQuestionArray, () => {
+watch(allQuestionArray, async () => {
   setTimeout(() => {
     answerArea.value.scrollTop = answerArea.value.scrollHeight;
   }, 100);
