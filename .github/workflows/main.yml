@@ -44,9 +44,8 @@ jobs:
       - name: Build frontend
         run: |
           yarn build
-          touch .env
-          echo VITE_API_KEY=${{ secrets.VITE_API_KEY }} >> .env
-          cat .env
+        env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
